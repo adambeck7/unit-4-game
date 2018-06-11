@@ -19,31 +19,70 @@
         <div>
             <div>
                 <!-- <img id="randomBtn" src="images/3.png"> -->
-                <h2 class="col-md-2">Score:</h2>
-                <p class="col-md-1" id="score"></p>
+                <h2 class="col-md-2">Dealer's Score:</h2>
+                <p class="col-md-1" id="score-to-match"></p>
+            </div>
+            <div>
+                <!-- <img id="randomBtn" src="images/3.png"> -->
+                <h2 class="col-md-2">Your Score:</h2>
+                <p class="col-md-1" id="score-total"></p>
             </div>
         </div>
 
         <div class="row">
             <div>
-                <img id="btn1" src="images/3.png">
+                <img id="btn1" src="images/3.png" value="">
             </div>
             <div>
-                <img id "btn2" src="images/11.png">
+                <img id="btn2" src="images/11.png" value="">
             </div>
             <div>
-                <img id="btn3" src="images/7.png">
+                <img id="btn3" src="images/7.png" value="">
             </div>
             <div>
-                <img id="btn4" src="images/23.png">
+                <img id="btn4" src="images/23.png" value="">
             </div>
         </div>
     </div>
     <script>
         $(document).ready(function () {
-            randomNumber = Math.floor((Math.random() * 45) + 13);
-            $("#score").html(randomNumber);
+            var totalOfClicked = 0;
+            var randomNumber = Math.floor((Math.random() * 55) + 30);
+            var randomNumberForButton1 = Math.floor((Math.random() * 12) + 3);
+            var randomNumberForButton2 = Math.floor((Math.random() * 11) + 3);
+            var randomNumberForButton3 = Math.floor((Math.random() * 10) + 3);
+            var randomNumberForButton4 = Math.floor((Math.random() * 8) + 3);
 
+            $("#score-to-match").html(randomNumber);
+            $("#btn1").attr('value', randomNumberForButton1);
+            $("#btn2").attr('value', randomNumberForButton2);
+            $("#btn3").attr('value', randomNumberForButton3);
+            $("#btn4").attr('value', randomNumberForButton4);
+
+            $("#btn1").click(function () {
+                var btn1Val = $(this).attr('value');
+                totalOfClicked = Number(totalOfClicked) + Number(btn1Val);
+                $("#score-total").text(totalOfClicked);
+                console.log(btn1Val);
+            });
+            $("#btn2").click(function () {
+                var btn2Val = $(this).attr('value');
+                totalOfClicked = Number(totalOfClicked) + Number(btn2Val);
+                $("#score-total").text(totalOfClicked);
+                console.log(btn2Val);
+            });
+            $("#btn3").click(function () {
+                var btn3Val = $(this).attr('value');
+                totalOfClicked = Number(totalOfClicked) + Number(btn3Val);
+                $("#score-total").text(totalOfClicked);
+                console.log(btn3Val);
+            });
+            $("#btn4").click(function () {
+                var btn4Val = $(this).attr('value');
+                totalOfClicked = Number(totalOfClicked) + Number(btn4Val);
+                $("#score-total").text(totalOfClicked);
+                console.log(btn4Val);
+            });
         });
     </script>
 </body>

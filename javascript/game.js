@@ -38,7 +38,7 @@ $(document).ready(function () {
     };
 
 
-    $(".container").click(function () {
+    $(".flex-container").click(function () {
         var totalScore = parseInt($("#score-total").text());
         var otherScore = parseInt($("#score-to-match").text());
 
@@ -94,6 +94,11 @@ $(document).ready(function () {
         totalOfClicked = Number(totalOfClicked) + Number(btn1Val);
         $("#score-total").text(totalOfClicked);
         console.log(btn1Val);
+        var move1 = $("#placeholder").offset();
+        $("#btn1").animate({
+            top: move1.top,
+            left: move1.left
+        }, 1000);
     });
     $("#btn2").click(function () {
         var btn2Val = $(this).attr('value');
@@ -113,4 +118,6 @@ $(document).ready(function () {
         $("#score-total").text(totalOfClicked);
         console.log(btn4Val);
     });
+    newGame();
+
 });

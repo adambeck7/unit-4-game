@@ -5,54 +5,69 @@
     <meta charset="utf-8" />
     <title>jquery blackjack game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <div>
-                <!-- <img id="randomBtn" src="images/3.png"> -->
-                <h4 class="col-md-2">Dealer's Score:</h2>
-                    <p class="col-md-1" id="score-to-match" value=""></p>
-            </div>
-            <div>
-                <!-- <img id="randomBtn" src="images/3.png"> -->
-                <h4 class="col-md-2">Your Score:</h2>
-                    <p class="col-md-1" id="score-total"></p>
-            </div>
-            <div>
-                <!-- <img id="randomBtn" src="images/3.png"> -->
-                <h4 class="col-md-2">Wins:</h2>
-                    <p class="col-md-1" id="wins"></p>
-            </div>
-            <div>
-                <!-- <img id="randomBtn" src="images/3.png"> -->
-                <h4 class="col-md-2">Losses:</h2>
-                    <p class="col-md-1" id="losses"></p>
-            </div>
-        </div>
 
-        <div class="row">
-            <div>
-                <img class "btnVal" id="btn1" src="images/3.png" value="">
+    <div class="flex-container">
+        <div class="jumbotron d-flex flex-column justify-content-center">
+            <div class="justify-content-center p-2">
+                <!-- <img id="randomBtn" src="images/3.png"> -->
+                <h4 class="d-flex justify-content-center">House:</h2>
+                    <p class="d-flex justify-content-center" id="score-to-match" value=""></p>
             </div>
-            <div>
-                <img class "btnVal" id="btn2" src="images/11.png" value="">
+            <div class="d-flex flex-row justify-content-center">
+                <div>
+                    <img class="btnVal image-holder images p-2" id="placeholder" src="images/clubs.png">
+                </div>
+
             </div>
-            <div>
-                <img class "btnVal" id="btn3" src="images/7.png" value="">
+
+            <div class="justify-content-center flex-row p-2">
+                <!-- <img id="randomBtn" src="images/3.png"> -->
+                <h4 class="d-flex justify-content-center">Your Score:</h2>
+                    <p class="d-flex justify-content-center" id="score-total"></p>
             </div>
-            <div>
-                <img class "btnVal" id="btn4" src="images/23.png" value="">
+
+
+
+            <div class="d-flex flex-row justify-content-center">
+                <div>
+                    <img class="btnVal images p-2" id="btn1" src="images/clubs.png" value="">
+                </div>
+                <div>
+                    <img class="btnVal images p-2" id="btn2" src="images/diamonds.png" value="">
+                </div>
+                <div>
+                    <img class="btnVal images p-2" id="btn3" src="images/hearts.png" value="">
+                </div>
+                <div>
+                    <img class="btnVal images p-2" id="btn4" src="images/spades.png" value="">
+                </div>
             </div>
+            <div class="d-flex justify-content-center flex-row p-2">
+                <!-- <img id="randomBtn" src="images/3.png"> -->
+                <div class="d-flex justify-content-around p-2">
+                    <div class="d-flex ">Wins: </div>
+                    <div class="d-flex" id="wins"></div>
+                </div>
+                <div class="d-flex justify-content-around p-2">
+                    <div class="d-flex">Losses: </div>
+                    <div class="d-flex" id="losses"></div>
+                </div>
+            </div>
+            <!-- <div class="justify-content-center flex-row p-2">
+                <! <img id="randomBtn" src="images/3.png"> -->
+
         </div>
+    </div>
     </div>
 
 </body>

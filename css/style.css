@@ -1,4 +1,19 @@
+.images {
+    width: 140px;
+    height: 150px;
+    border: solid white 2px;
+    margin: 10px;
+}
+
+.jumbotron {
+    background-color: green;
+}
+
 body {
-    font-size: 200px;
-    color: red;
+    color: white;
+    background-color: green;
+}
+
+.image-holder {
+    opacity: 0;
 }
